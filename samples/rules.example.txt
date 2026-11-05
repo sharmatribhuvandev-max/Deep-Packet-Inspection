@@ -1,0 +1,21 @@
+# Deep Packet Inspection rules file
+# One rule per line. Lines starting with '#' are comments.
+#
+#   block-ip <address or CIDR>   traffic to or from this address / range
+#   block-app <name>             an application (YouTube, Netflix, TikTok, ...)
+#   block-domain <domain|word>   "tiktok.com" = that domain and its subdomains
+#                                "tiktok"     = any domain containing the word
+#   block-port <1-65535>         TCP/UDP traffic using this port
+
+# Streaming and social media during work hours
+block-app YouTube
+block-app TikTok
+
+# A guest device
+block-ip 192.168.1.50
+
+# BitTorrent's default port
+block-port 6881
+
+# Everything under facebook.com
+block-domain facebook.com

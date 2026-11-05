@@ -1,0 +1,17 @@
+# Build output
+build/
+*.exe
+*.o
+*.obj
+
+# Captures and reports produced by running Deep Packet Inspection
+*.pcap
+!samples/sample.pcap
+*.json
+*.csv
+
+# Editor / OS files
+.vscode/
+.idea/
+.DS_Store
+__pycache__/
